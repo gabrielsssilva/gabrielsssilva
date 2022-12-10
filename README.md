@@ -1,6 +1,5 @@
 //   FUNÇÕES USADAS SÃO JAVASCRIPT.JS DESENVOLVIDO PELO GABRIEL E WEBASAP   //
 
-
 let relogio = document.querySelector('#relogio')
 let h = document.querySelector('#h')
 let m = document.querySelector('#m')
@@ -14,6 +13,7 @@ let data = document.querySelector('#data')
 let semana = document.querySelector('#semana')
 
 let dataHora = new Date()
+//console.log(dataHora)
 function moveRelogio() { 
 
     let momentoAtual = new Date()
@@ -40,8 +40,6 @@ function moveRelogio() {
 
     setTimeout("moveRelogio()",1000) 
 }
-
-// FUNÇÕES USADAS ( switch Case ) //
 
 function pegarData() {
 
@@ -78,14 +76,15 @@ function pegarData() {
         case 6:
             diaDaSemana = 'SÁB'
             break;
-    } //  FUNÇÕES USADAS ( switch case )  //
+    } // fim switch case
+
     let dataAtual = dia + '/' + mes + '/' + ano
 
     semana.textContent = diaDaSemana
     data.textContent = dataAtual
 
 }
-// FUNÇÕES USADAS ( var options )  //
+// evocar a funcao
 pegarData()
 
 var options = {
